@@ -1,0 +1,12 @@
+.header {
+    height: 15%;
+}
+
+.nav {
+    height: 75%;
+    background-color: red;
+}
+
+.footer {
+    height: 10%;
+}

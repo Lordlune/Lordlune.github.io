@@ -1,0 +1,38 @@
+.create {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    margin: 1rem auto;
+}
+
+.create-button {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+.create {
+    display: flex;
+    align-items: center;
+}
+
+.create h1 {
+    width: 40%;
+}

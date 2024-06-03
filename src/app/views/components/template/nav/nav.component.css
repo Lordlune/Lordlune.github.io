@@ -1,0 +1,16 @@
+.container {
+    height: 80% !important;
+}
+
+i {
+    margin-right: 1rem;
+}
+
+button {
+    margin: .5rem auto 0 .5rem;
+    border-radius: 10px;
+}
+
+.sidenav-content {
+    height: 100%;
+}

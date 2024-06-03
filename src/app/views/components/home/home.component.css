@@ -1,0 +1,22 @@
+mat-card {
+    width: 60%;
+    height: 80%;
+    margin: .4rem auto 0 auto;
+}
+
+mat-card-header {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 425px) {
+    img {
+        width: 60%;
+    }
+}
