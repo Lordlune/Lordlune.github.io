@@ -1,0 +1,53 @@
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <h1>Ordem de Serviço</h1>
+    <mat-form-field class="full-width">
+      <mat-label>Cliente</mat-label>
+      <mat-select formControlName="cliente" name="cliente">
+        @for (cliente of listaClientes; track cliente) {
+        <mat-option [value]="cliente.id">{{ cliente.nome }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Técnico</mat-label>
+      <mat-select formControlName="tecnico" name="tecnico">
+        @for (tecnico of listaTecnicos; track tecnico) {
+        <mat-option [value]="tecnico.id">{{ tecnico.nome }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Prioriade</mat-label>
+      <mat-select [(value)]="data.prioridade" name="prioridade">
+        @for (prioridade of listEnumPrioridade; track prioridade) {
+        <mat-option [value]="prioridade.id">{{ prioridade.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Status</mat-label>
+      <mat-select [(value)]="data.status" name="status">
+        @for (status of listEnumStatus; track status) {
+        <mat-option [value]="status.id">{{ status.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Observações</mat-label>
+      <textarea matInput formControlName="observacoes" placeholder="Digite uma observação para ordem de serviço"
+        maxlength="255"></textarea>
+    </mat-form-field>
+
+    <button mat-stroked-button class="button-add" (click)="saveOrUpdate()">
+      Salvar
+    </button>
+    <button mat-stroked-button class="button-cancel" color="warn" (click)="voltar()">
+      Voltar
+    </button>
+  </form>
+</div>
