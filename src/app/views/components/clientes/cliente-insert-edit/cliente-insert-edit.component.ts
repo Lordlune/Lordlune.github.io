@@ -74,7 +74,7 @@ export class ClienteInsertEditComponent implements OnInit {
       },
       (err) => {
         if (err.error.status == 400) {
-          this.http.message(err.error.error);
+          this.http.message(err.error.errors[0].message);
           return;
         }
       }
