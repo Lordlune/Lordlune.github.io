@@ -3,44 +3,23 @@
     <h1>Técnico</h1>
     <mat-form-field class="full-width">
       <mat-label>Nome</mat-label>
-      <input
-        matInput
-        type="text"
-        placeholder="Ex. Linus Tavares"
-        formControlName="nome"
-      />
+      <input matInput type="text" placeholder="Ex. Linus Tavares" formControlName="nome" />
     </mat-form-field>
 
     <mat-form-field class="full-width">
       <mat-label>CPF</mat-label>
-      <input
-        matInput
-        type="text"
-        placeholder="000.000.000-00"
-        formControlName="cpf"
-      />
+      <input matInput type="text" placeholder="000.000.000-00" formControlName="cpf" [maxlength]="11" />
     </mat-form-field>
 
     <mat-form-field class="full-width">
       <mat-label>Telefone</mat-label>
-      <input
-        matInput
-        type="text"
-        placeholder="Ex. (00) 90000-0000"
-        formControlName="telefone"
-        [maxLength]="11"
-      />
+      <input matInput type="text" placeholder="Ex. (00) 90000-0000" formControlName="telefone" [maxLength]="11" />
     </mat-form-field>
 
     <button mat-stroked-button class="button-add" (click)="saveOrUpdate()">
       Salvar
     </button>
-    <button
-      mat-stroked-button
-      class="button-cancel"
-      color="warn"
-      (click)="voltar()"
-    >
+    <button mat-stroked-button class="button-cancel" color="warn" (click)="voltar()">
       Voltar
     </button>
   </form>
